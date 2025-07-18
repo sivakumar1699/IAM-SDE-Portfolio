@@ -7,14 +7,14 @@ const Skill = ({ name, x, y }) => {
   return (
     <motion.div
       ref={ref}
-      whileHover={{ scale: 1.05 }}
+      whileHover={{scale:1.05}}
       initial={{ x: 0, y: 0 }}
-      whileInView={{ x: x, y: y, transition: { duration: 1.5 } }}
+      whileInView={{ x: x, y: y, transition: {duration: 1.5} }}
       viewport={{ once: true }}
       className="cursor-pointer w-max origin-center absolute 
-      font-semibold bg-dark text-light py-3 px-6 rounded-full dark:bg-light dark:text-dark
-      lg:py-2 lg:px-4 md:text-sm md:py-1.5 md:px-3 
-      xs:static xs:bg-dark xs:dark:bg-light xs:text-light xs:dark:text-dark xs:my-2"
+       font-semibold bg-dark text-light py-3 px-6 rounded-full dark:bg-light dark:text-dark
+       lg:py-2 lg:px-4 md:text-sm md:py-1.5 md:px-3  xs:bg-transparent xs:dark:bg-transparent xs:text-dark xs:dark:text-light xs:font-bold
+       "
     >
       {name}
     </motion.div>
@@ -29,12 +29,12 @@ const Skills = () => {
         Skills
       </h2> 
     <div
-  ref={ref}
-    className="w-full h-[100vh] relative bg-circularLight dark:bg-circularDark flex items-center justify-center 
-    mb-64 md:mb-32 rounded-full
-    lg:bg-circularLightLg lg:dark:bg-circularDarkLg md:bg-circularLightMd md:dark:bg-circularDarkMd 
-    sm:bg-circularLightSm sm:dark:bg-circularDarkSm lg:h-[80vh] sm:h-[60vh] xs:h-auto
-    xs:flex-col xs:flex-wrap xs:gap-2 xs:pt-4 xs:pb-10"
+      ref={ref}
+      className="w-full h-[100vh] relative bg-circularLight dark:bg-circularDark  flex items-center justify-center 
+      mb-64 md:mb-32 rounded-full
+      lg:bg-circularLightLg lg:dark:bg-circularDarkLg md:bg-circularLightMd md:dark:bg-circularDarkMd 
+      sm:bg-circularLightSm sm:dark:bg-circularDarkSm lg:h-[80vh] sm:h-[60vh] xs:h-[50vh] 
+      "
     >
    
         <motion.div whileHover={{scale:1.05}} className="cursor-pointer flex rounded-full font-semibold bg-dark text-light p-8 shadow-dark
@@ -42,9 +42,7 @@ const Skills = () => {
         ">
         Web
       </motion.div>
-
-          <Skill name="SailPoint IdentityIQ" x="-20vw" y="2vw" />
-           <Skill name="SailPoint IdentityNow(ISC)" x="-20vw" y="2vw" />
+          <Skill name="SailPoint IdentityNow(ISC)" x="-20vw" y="2vw" />
           <Skill name="IAM Concepts" x="-5vw" y="-10vw" />
           <Skill name="Java" x="20vw" y="6vw" />
           <Skill name="BeanShell" x="0vw" y="12vw" />
